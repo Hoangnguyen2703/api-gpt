@@ -1,0 +1,93 @@
+#home{
+    max-width: 70%;
+    padding: 30px;
+    border: 3px solid #0e0c0c;
+    margin: auto; 
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    line-height: 10px; 
+    font-size: 30px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.user-info-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+.user-name{
+    font-size: 10px;
+}
+.menu {
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 13%; /* Hiển thị menu về bên phải của biểu tượng người dùng */
+        width: 70px; 
+        border-radius: 8px;
+        background-color: #707070;
+        color: rgb(255, 255, 255);
+        border: 1px solid #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1; /* Đặt z-indexdsasasdj để menu hiển thị trên các phần tử khác nếu tràn ra ngoài */
+        font-size: 8px;
+    }
+
+.menu-item {
+        padding: 10px;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-bottom: 1px solid #000000; /* Đặt đường viền giữa các mục menu */
+    }
+
+.menu-item:last-child {
+        border-bottom: none; 
+    }
+
+.menu-item:hover {
+        background-color: #a8a8a8;
+    }
+.icon-user {
+        float: right; /* Đặt biểu tượng người dùng sang phải */
+        align-self: center;
+        cursor: pointer;
+    }
+#chat-container {
+  max-width: 70%;
+  max-height: 800px;
+  margin: 0 auto;
+  border: 3px solid #0e0c0c;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+#chat-log {
+  height: 200px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  
+}
+#user-input {
+  width: 82%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #030303;
+}
+#send-button {
+  width: 13%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #030303;
+  border-radius: 10px;
+  color: #ccc;
+  background-color: rgb(0, 0, 0);
+}
+#send-button:hover {
+    background-color: #ccc;
+    color: #000000;
+}
