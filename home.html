@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/home.css" >
+  <title>S-GPT</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<div class="div-chua-chu" id="home"> 
+Welcome 
+<div class="user-info-container">
+    <span class="icon-user" onclick="toggleMenu()">&#128100;</span>
+    <span class="user-name">Hoàng</span>
+</div>
+<div class="menu" id="userMenu">
+    <div class="menu-item">Thông tin</div>
+    <div class="menu-item">Up to Pro</div>
+    <div class="menu-item">Đăng Xuất</div>
+</div>
+</div>
+<div id="chat-container">
+  <div id="chat-log"></div>
+  <input type="text" id="user-input" placeholder="Type your message...">
+  <button id="send-button" onclick="sendMessage()">Send</button>
+</div>
+</body>
+<script src="script/home.js"> </script>
+</html>

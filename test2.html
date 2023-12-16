@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/test2.css" >
+    <title>Login Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function login() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            $.ajax({
+                type: "POST",
+                url: "login.php",
+                data: { username: username, password: password },
+                success: function(response) {
+                    $("#result").html(response);
+
+                    // Kiểm tra nếu đăng nhập thành công, chuyển hướng đến trang home
+                    if (response === "Login successful!") {
+                        window.location.href = "home.html";
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
